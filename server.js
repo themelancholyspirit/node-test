@@ -1,7 +1,15 @@
 const express = require("express");
 const app = express();
 
+const cors = require("cors");
+
 const port = 5000 || process.env.PORT;
+
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 app.get("/", (req, res) => {
   res.send("hello");
