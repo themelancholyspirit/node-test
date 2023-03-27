@@ -7,7 +7,7 @@ app.get("/", (req, res) => {
   res.send("hello");
 });
 
-app.get("/", (req, res) => {
+app.get("/users", (req, res) => {
   res.send({
     users: [
       { name: "Guga", age: 21, occupation: "Computer Science" },
