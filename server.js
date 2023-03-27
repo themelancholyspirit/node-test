@@ -7,4 +7,13 @@ app.get("/", (req, res) => {
   res.send("hello");
 });
 
+app.get("/", (req, res) => {
+  res.send({
+    users: [
+      { name: "Guga", age: 21, occupation: "Computer Science" },
+      { name: "David", age: 21, occupation: "Medicine" },
+    ],
+  });
+});
+
 app.listen(port, console.log("server is running"));
